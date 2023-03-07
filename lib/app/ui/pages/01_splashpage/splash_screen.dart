@@ -18,16 +18,34 @@ class _SpalshScreenState extends State<SpalshScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
               ColorConst.splashScreenSecondColor,
               ColorConst.splashScreenFirstColor,
+            ]),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              SizedBox(
+                width: 100,
+                height: 100,
+                child: Image.asset('assets/png/doge.png'),
+              ),
+              const Text(
+                'Meme Generator',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),

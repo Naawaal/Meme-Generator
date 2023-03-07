@@ -6,11 +6,9 @@ import 'package:meme_generator/app/ui/pages/02_homepage/homepage_screen.dart';
 class SplashServices {
   void spalshFunction() {
     Timer(
-      3.seconds,
+      5.seconds,
       () {
-        Get.off(
-          const HomepageScreen(),
-        );
+        Get.off(() => const HomepageScreen());
       },
     );
   }

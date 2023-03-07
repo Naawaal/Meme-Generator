@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meme_generator/app/data/api/get_meme.dart';
 import 'package:meme_generator/app/data/services/01_splash_services/spalsh_service.dart';
 import 'package:meme_generator/app/ui/theme/color_const.dart';
 
@@ -14,6 +15,7 @@ class _SpalshScreenState extends State<SpalshScreen> {
   void initState() {
     super.initState();
     SplashServices().spalshFunction();
+    GetMemeApi().getMemeApi();
   }
 
   @override
